@@ -12,6 +12,11 @@
             flex-direction: column;
             justify-content: space-between;
         }
+        .truncate {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     </style>
 </head>
 <body>
@@ -21,10 +26,9 @@
                 <a href="/home/book/{{BookID}}" class="col-md-2 col-sm-4 col-6 my-2 btn mx-2">
                     <div class="card book-item">
                         <div class="card-body">
-                            <h6 class="card-title">{{Title}}</h6>
-                            <p class="card-text">{{Author}}</p>
+                            <img class="h2 w2" src="a" alt="Hình ảnh sách">
                         </div>
-                        <div class="btn btn-primary">View Details</div>
+                        <div class="btn truncate">{{Title}}</div>
                     </div>
                 </a>
             {{/each}}
